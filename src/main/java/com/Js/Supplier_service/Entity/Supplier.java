@@ -31,10 +31,10 @@ public class Supplier {
     private int id;
     
     @Column(nullable = false)
-    private String Codigo;
+    private String codigo;
     
     @Column(nullable = false)
-    private String TradeName;
+    private String tradeName;
     
     @Column(nullable = false)
     private String email;
