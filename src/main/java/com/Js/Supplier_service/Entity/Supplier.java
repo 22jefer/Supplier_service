@@ -31,7 +31,7 @@ public class Supplier {
     private int id;
     
     @Column(nullable = false)
-    private String codigo;
+    private String code;
     
     @Column(nullable = false)
     private String tradeName;
