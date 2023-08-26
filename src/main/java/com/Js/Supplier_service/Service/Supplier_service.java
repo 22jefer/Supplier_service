@@ -8,6 +8,7 @@ import com.Js.Supplier_service.Entity.Supplier;
 import com.Js.Supplier_service.Repository.Supplier_repository;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
+@Data
 public class Supplier_service {
     
     private final Supplier_repository supplier_repository;

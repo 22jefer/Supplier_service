@@ -8,8 +8,7 @@ import com.Js.Supplier_service.Entity.Supplier;
 import com.Js.Supplier_service.Service.Supplier_service;
 import java.util.List;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import lombok.Data;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -28,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/supplier")
 @AllArgsConstructor
+@Data   
 public class Supplier_controller {
     
     private final Supplier_service supplier_service;
@@ -37,8 +36,13 @@ public class Supplier_controller {
         return supplier_service.saveSupplier(supplier);
     }
     
+    @GetMapping("/response/{id}")
+    public Supplier response (@PathVariable Integer id){
+        return supplier_service.getSupplierById(id);    
+    }
+    
     @GetMapping("/{id}")
-    public Supplier getSupplierById(@PathVariable Integer id){
+    public Supplier getSupplierById (@PathVariable Integer id){
         return supplier_service.getSupplierById(id);    
     }
     
