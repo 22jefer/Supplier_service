@@ -4,10 +4,13 @@
  */
 package com.Js.Supplier_service.Repository;
 
+import com.Js.Supplier_service.Entity.Supplier;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 /**
  *
  * @author Asus
  */
-public interface Supplier_repository {
+public interface Supplier_repository extends JpaRepository<Supplier, Integer>{
     
 }
